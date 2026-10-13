@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="香港教育大學 GEM1047《非華語生學中文：以中史動畫為基礎》服務學習課程成果與合作邀請" />
+  <title>GEM1047《非華語生學中文》｜香港教育大學</title>
+  <style>
+    :root {
+      --cream: #fbf6ea;
+      --cream-dark: #f3e6c8;
+      --sand: #e8d5a8;
+      --ink: #3d2f1f;
+      --ink-soft: #6b5a45;
+      --orange: #e8913a;
+      --green: #6a9e6a;
+      --green-soft: #dce9d4;
+      --sky: #7eb8d4;
+      --sky-soft: #e4f2f8;
+      --coral: #e87a6a;
+      --white: #fffdf8;
+      --card: #fffdf7;
+      --line: #e5d4b0;
+      --shadow: 0 4px 18px rgba(91, 64, 32, 0.08);
+      --radius: 18px;
+      --nav-h: 68px;
+      --max: 1080px;
+      --orange-deep: #c46a1f;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+
+    body {
+      font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.7;
+      font-size: 16px;
+      background-image:
+        radial-gradient(circle at 12% 18%, rgba(232, 145, 58, 0.08), transparent 28%),
+        radial-gradient(circle at 88% 8%, rgba(126, 184, 212, 0.12), transparent 26%),
+        radial-gradient(circle at 80% 70%, rgba(106, 158, 106, 0.08), transparent 30%);
+    }
+
+    img, video { max-width: 100%; display: block; }
+    a { color: var(--orange-deep); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
+    section { padding: 3.4rem 0; position: relative; }
+
+    h2.section-title {
+      font-size: clamp(1.45rem, 2.6vw, 1.85rem);
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .section-underline {
+      width: 56px;
+      height: 6px;
+      background: linear-gradient(90deg, var(--orange), var(--sky));
+      border-radius: 99px;
+      margin-bottom: 1.6rem;
+    }
+
+    .lead { color: var(--ink-soft); max-width: 44rem; }
+
+    /* cartoon doodle helpers */
+    .doodle { flex-shrink: 0; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      height: var(--nav-h);
+      background: rgba(251, 246, 234, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--line);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 100%; gap: 1rem;
+    }
+    .nav-brand {
+      font-weight: 800; color: var(--ink); font-size: 0.95rem;
+      display: inline-flex; align-items: center; gap: 0.45rem;
+    }
+    .nav-brand .badge {
+      background: var(--orange); color: #fff; font-size: 0.7rem;
+      padding: 0.15rem 0.45rem; border-radius: 999px;
+    }
+    .nav-links { display: flex; gap: 0.1rem; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a {
+      color: var(--ink); font-size: 0.84rem; padding: 0.4rem 0.6rem;
+      border-radius: 999px; text-decoration: none;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible {
+      background: var(--cream-dark); color: var(--orange-deep); text-decoration: none;
+    }
+    .nav-toggle {
+      display: none; background: var(--white); border: 2px solid var(--line);
+      border-radius: 10px; padding: 0.35rem 0.65rem; cursor: pointer;
+      font-size: 0.85rem; color: var(--ink); font-weight: 700;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 3.2rem 0 2.8rem;
+      overflow: hidden;
+    }
+    .hero-card {
+      background: linear-gradient(145deg, #fff8e7 0%, #ffe8c2 45%, #f6d9a8 100%);
+      border: 3px solid #f0c57a;
+      border-radius: 28px;
+      padding: clamp(1.6rem, 4vw, 2.6rem);
+      box-shadow: var(--shadow);
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: #fff; border: 2px solid var(--sand);
+      padding: 0.25rem 0.75rem; border-radius: 999px;
+      font-size: 0.8rem; font-weight: 700; color: var(--orange-deep);
+      margin-bottom: 0.85rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.55rem, 3.8vw, 2.25rem);
+      line-height: 1.3; margin-bottom: 0.35rem; font-weight: 900;
+    }
+    .hero .subtitle { font-size: 1.1rem; color: var(--ink-soft); margin-bottom: 0.55rem; }
+    .hero .year { font-weight: 700; margin-bottom: 1rem; color: var(--orange-deep); }
+    .hero .tagline {
+      background: rgba(255,255,255,0.7);
+      border-left: 5px solid var(--green);
+      padding: 0.7rem 0.9rem; border-radius: 0 12px 12px 0;
+      font-size: 1.02rem;
+    }
+    .hero .org { margin-top: 1.2rem; font-size: 0.9rem; color: var(--ink-soft); }
+    .hero-art { display: flex; justify-content: center; }
+    .hero-art svg { width: min(100%, 280px); height: auto; }
+
+    /* INTRO */
+    .intro-grid {
+      display: grid; grid-template-columns: 1.35fr 1fr; gap: 1.4rem; align-items: start;
+    }
+    .intro-card, .summary-card, .school-card, .works-card, .news-card, blockquote.feedback {
+      background: var(--card);
+      border: 2px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .intro-card { padding: 1.4rem 1.45rem; background: var(--green-soft); border-color: #b7d1a8; }
+    .intro-card h3 { margin-bottom: 0.5rem; font-size: 1.05rem; }
+    .intro-card ul { margin-left: 1.15rem; }
+    .intro-card li { margin-bottom: 0.35rem; }
+
+    .benefit-list { list-style: none; display: grid; gap: 0.65rem; margin-top: 1.2rem; }
+    .benefit-list li {
+      background: var(--card); border: 2px solid var(--line); border-radius: 14px;
+      padding: 0.75rem 1rem; display: flex; gap: 0.65rem; align-items: flex-start;
+      box-shadow: var(--shadow); font-size: 0.95rem;
+    }
+    .benefit-list .tick {
+      width: 1.4rem; height: 1.4rem; border-radius: 50%;
+      background: var(--green); color: #fff; display: inline-flex;
+      align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800; flex-shrink: 0;
+    }
+
+    /* SUMMARY */
+    .band-soft { background: rgba(243, 230, 200, 0.45); border-block: 2px dashed var(--sand); }
+    .summary-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem;
+    }
+    .summary-card { padding: 1.2rem 1.25rem; }
+    .summary-card .icon {
+      width: 44px; height: 44px; border-radius: 14px;
+      background: #fff3d9; border: 2px solid var(--sand);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 0.7rem; font-size: 1.25rem;
+    }
+    .summary-card .label { font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.25rem; }
+    .summary-card .value { font-weight: 800; font-size: 1.02rem; }
+
+    /* SCHOOLS */
+    .school-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.9rem;
+      list-style: none;
+    }
+    .school-card {
+      padding: 1.1rem 1.2rem; display: flex; gap: 0.85rem; align-items: flex-start;
+    }
+    .school-card .emoji {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: var(--sky-soft); border: 2px solid #b7d7e8;
+      display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;
+    }
+    .school-card strong { display: block; margin-bottom: 0.15rem; }
+    .school-card span { font-size: 0.85rem; color: var(--ink-soft); }
+
+    /* NEWS */
+    .news-card { padding: 1.5rem 1.55rem; background: linear-gradient(180deg, #fffdf8, #fff4df); }
+    .news-meta { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 0.6rem; }
+    .news-card h3 { font-size: 1.15rem; margin-bottom: 0.7rem; }
+    .news-card p { color: var(--ink-soft); margin-bottom: 0.75rem; }
+    .news-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--orange); color: #fff !important; font-weight: 800;
+      padding: 0.55rem 1rem; border-radius: 999px; text-decoration: none !important;
+      box-shadow: 0 3px 0 var(--orange-deep);
+    }
+    .news-link:hover { filter: brightness(1.05); }
+
+    /* VIDEO */
+    .video-wrap {
+      background: #2a2118; border-radius: 22px; overflow: hidden;
+      border: 3px solid #c9a66b; box-shadow: var(--shadow);
+    }
+    .video-wrap video { width: 100%; aspect-ratio: 16 / 9; background: #000; }
+    .video-caption {
+      background: var(--card); padding: 0.9rem 1.1rem; border-top: 2px solid var(--line);
+      font-size: 0.92rem; color: var(--ink-soft);
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.1rem;
+    }
+    .gallery-card {
+      background: var(--card); border-radius: var(--radius); overflow: hidden;
+      border: 2px solid var(--line); box-shadow: var(--shadow);
+      transition: transform 0.2s ease;
+    }
+    .gallery-card:hover { transform: translateY(-4px); }
+    .gallery-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--cream-dark); }
+    .gallery-card figcaption { padding: 0.85rem 1rem 1.05rem; font-size: 0.9rem; }
+    .gallery-card figcaption strong { display: block; margin-bottom: 0.15rem; }
+    .gallery-card figcaption span { color: var(--ink-soft); font-size: 0.82rem; }
+
+    /* WORKS */
+    .works-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem; }
+    .works-card { padding: 1.3rem 1.35rem; }
+    .works-card h3 { font-size: 1.05rem; margin-bottom: 0.7rem; }
+    .works-card ul { margin-left: 1.1rem; font-size: 0.92rem; }
+    .works-card li { margin-bottom: 0.4rem; }
+    .works-folder { margin-top: 0.9rem; font-weight: 800; font-size: 0.9rem; }
+    .highlight-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.3rem; }
+    .pill-link {
+      display: inline-block; background: #fff3d9; color: var(--ink);
+      padding: 0.45rem 0.85rem; border-radius: 999px; font-size: 0.85rem; font-weight: 700;
+      border: 2px solid var(--sand); text-decoration: none;
+    }
+    .pill-link:hover { background: var(--orange); color: #fff; border-color: var(--orange); text-decoration: none; }
+
+    /* QUOTES */
+    .quotes { display: grid; gap: 1.1rem; }
+    @media (min-width: 720px) {
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .quotes.two-col { grid-template-columns: repeat(2, 1fr); }
+    }
+    blockquote.feedback {
+      padding: 1.3rem 1.35rem; position: relative; font-size: 0.95rem;
+    }
+    blockquote.feedback::before {
+      content: "❝"; position: absolute; top: 0.45rem; left: 0.85rem;
+      font-size: 1.8rem; color: var(--orange); opacity: 0.85;
+    }
+    blockquote.feedback p { padding-top: 1rem; margin-bottom: 0.75rem; }
+    blockquote.feedback footer { font-size: 0.8rem; color: var(--ink-soft); }
+    blockquote.feedback cite { font-style: normal; color: var(--orange-deep); font-weight: 800; }
+
+    /* INVITE */
+    .invite {
+      background: linear-gradient(160deg, #fff8e7, #ffe0b0);
+      border: 3px solid #f0c57a; border-radius: 26px;
+      padding: 2rem 1.6rem; text-align: center; box-shadow: var(--shadow);
+    }
+    .invite .section-underline { margin-inline: auto; }
+    .invite > p { max-width: 38rem; margin-inline: auto; color: var(--ink-soft); }
+    .school-needs { list-style: none; max-width: 28rem; margin: 1.2rem auto 0; text-align: left; }
+    .school-needs li {
+      padding: 0.4rem 0 0.4rem 1.5rem; position: relative; font-size: 0.95rem;
+    }
+    .school-needs li::before {
+      content: "★"; position: absolute; left: 0; color: var(--orange);
+    }
+    .contact-box {
+      margin-top: 1.4rem; display: inline-block; background: var(--white);
+      border-radius: 16px; padding: 1.1rem 1.45rem; border: 2px solid var(--line); text-align: left;
+    }
+    .contact-box dt { font-size: 0.75rem; color: var(--ink-soft); margin-top: 0.5rem; }
+    .contact-box dt:first-child { margin-top: 0; }
+    .contact-box dd { font-weight: 800; }
+
+    /* FOOTER */
+    .footer {
+      background: #4a3724; color: rgba(255, 248, 230, 0.88);
+      padding: 2.1rem 0; font-size: 0.85rem; margin-top: 1rem;
+    }
+    .footer-inner { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; }
+    .footer strong { color: #fff; display: block; margin-bottom: 0.3rem; }
+    .footer a { color: #ffd59a; }
+
+    .back-top {
+      position: fixed; right: 1.2rem; bottom: 1.2rem; width: 46px; height: 46px;
+      border-radius: 50%; background: var(--orange); color: #fff; border: none;
+      cursor: pointer; box-shadow: var(--shadow); font-size: 1.15rem; font-weight: 800;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 90;
+    }
+    .back-top.show { opacity: 1; pointer-events: auto; }
+
+    .float-deco { position: absolute; pointer-events: none; opacity: 0.55; }
+    .float-deco.star1 { top: 0.5rem; right: 8%; }
+    .float-deco.book1 { bottom: 0.2rem; left: 4%; }
+
+    @media (max-width: 860px) {
+      .nav-toggle { display: block; }
+      .nav-links {
+        display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
+        background: var(--cream); flex-direction: column; padding: 0.8rem 1rem 1rem;
+        border-bottom: 2px solid var(--line); box-shadow: var(--shadow);
+      }
+      .nav-links.open { display: flex; }
+      .hero-card { grid-template-columns: 1fr; }
+      .intro-grid { grid-template-columns: 1fr; }
+      section { padding: 2.6rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="#top">
+        <svg class="doodle" width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#FFE08A" stroke="#E8913A" stroke-width="3"/>
+          <path d="M18 36c6-10 22-10 28 0" fill="none" stroke="#C46A1F" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="26" r="3" fill="#3D2F1F"/><circle cx="40" cy="26" r="3" fill="#3D2F1F"/>
+        </svg>
+        GEM1047 <span class="badge">非華語生學中文</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" id="navToggle">選單</button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#intro">課程簡介</a></li>
+        <li><a href="#summary">服務概要</a></li>
+        <li><a href="#schools">合作學校</a></li>
+        <li><a href="#news">媒體報道</a></li>
+        <li><a href="#video">課堂影片</a></li>
+        <li><a href="#activities">課堂活動</a></li>
+        <li><a href="#past-works">去年作品</a></li>
+        <li><a href="#invite">合作邀請</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 1. 橫幅 -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-card">
+          <div>
+            <div class="hero-badge">
+              <span aria-hidden="true">🎬</span> 服務學習通識課 · GEM1047
+            </div>
+            <h1 id="hero-title">《非華語生學中文》</h1>
+            <p class="subtitle">以中史動畫為基礎</p>
+            <p class="year">2026–27 年度　｜　服務期：2027 年 1 月至 2 月底</p>
+            <p class="tagline">以動畫為媒介，讓非華語學生輕鬆學中文與中國歷史</p>
+            <p class="org">香港教育大學 · The Education University of Hong Kong</p>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <!-- cartoon: book + film + kids -->
+            <svg viewBox="0 0 320 280" role="img" aria-label="卡通插圖：動畫書本與學習">
+              <ellipse cx="160" cy="250" rx="110" ry="16" fill="#E8D5A8" opacity="0.7"/>
+              <!-- book -->
+              <path d="M70 170 L160 140 L250 170 L250 210 L160 240 L70 210 Z" fill="#FFFDF8" stroke="#C46A1F" stroke-width="4"/>
+              <path d="M160 140 L160 240" stroke="#E8913A" stroke-width="4"/>
+              <path d="M95 185 L135 172" stroke="#7EB8D4" stroke-width="5" stroke-linecap="round"/>
+              <path d="M95 200 L130 188" stroke="#6A9E6A" stroke-width="5" stroke-linecap="round"/>
+              <path d="M190 172 L230 185" stroke="#E87A6A" stroke-width="5" stroke-linecap="round"/>
+              <!-- film reel -->
+              <circle cx="230" cy="88" r="48" fill="#FFE08A" stroke="#E8913A" stroke-width="4"/>
+              <circle cx="230" cy="88" r="18" fill="#FFFDF8" stroke="#C46A1F" stroke-width="3"/>
+              <circle cx="214" cy="72" r="6" fill="#C46A1F"/>
+              <circle cx="246" cy="72" r="6" fill="#C46A1F"/>
+              <circle cx="214" cy="104" r="6" fill="#C46A1F"/>
+              <circle cx="246" cy="104" r="6" fill="#C46A1F"/>
+              <!-- smiling star -->
+              <g transform="translate(70 70)">
+                <path d="M0-28 L8-8 L30-8 L12 4 L18 26 L0 12 L-18 26 L-12 4 L-30-8 L-8-8 Z" fill="#7EB8D4" stroke="#3D2F1F" stroke-width="3"/>
+                <circle cx="-7" cy="-2" r="2.5" fill="#3D2F1F"/>
+                <circle cx="7" cy="-2" r="2.5" fill="#3D2F1F"/>
+                <path d="M-8 8 Q0 14 8 8" fill="none" stroke="#3D2F1F" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+              <!-- pencil -->
+              <g transform="translate(48 118) rotate(-25)">
+                <rect x="0" y="0" width="70" height="14" rx="3" fill="#F5D76E" stroke="#C46A1F" stroke-width="2"/>
+                <polygon points="70,0 88,7 70,14" fill="#E87A6A" stroke="#C46A1F" stroke-width="2"/>
+                <rect x="0" y="0" width="10" height="14" fill="#6A9E6A"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 課程簡介 -->
+    <section id="intro" aria-labelledby="intro-title">
+      <div class="container">
+        <h2 class="section-title" id="intro-title">
+          <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="8" width="32" height="24" rx="6" fill="#FFE08A" stroke="#E8913A" stroke-width="2.5"/><path d="M12 18h16M12 24h10" stroke="#C46A1F" stroke-width="2.5" stroke-linecap="round"/></svg>
+          課程簡介
+        </h2>
+        <div class="section-underline"></div>
+        <div class="intro-grid">
+          <div>
+            <p class="lead" style="margin-bottom:1rem;">
+              《非華語生學中文》是香港教育大學一門<strong>服務學習通識課程</strong>（GEM1047）。
+              教大學生先在課堂學習非華語中文教學理念及背景，再分組到合作學校，
+              以<strong>中史動畫</strong>輔助教學，協助非華語學生學習中文、歷史及詞語。
+            </p>
+            <p class="lead">
+              教學內容圍繞《看動畫・學歷史》、學詞語、玩遊戲，並可按校本需要調適，
+              讓大學生實踐「學以致用、服務社群」，同時為非華語學生帶來更具趣味的學習體驗。
+            </p>
+            <ul class="benefit-list" aria-label="對合作學校的好處">
+              <li><span class="tick">✓</span><span><strong>費用全免</strong>——學校無需支付任何費用</span></li>
+              <li><span class="tick">✓</span><span><strong>人手充足</strong>——每堂最少 4 名準教師共同協作</span></li>
+              <li><span class="tick">✓</span><span><strong>配合校本</strong>——教案及工作紙可按貴校要求調適</span></li>
+              <li><span class="tick">✓</span><span><strong>彈性安排</strong>——課後班或抽離課堂，過程無需老師陪同</span></li>
+            </ul>
+          </div>
+          <aside class="intro-card">
+            <h3>課程重點</h3>
+            <ul>
+              <li>非華語中文教學理念與背景</li>
+              <li>中史動畫教學設計與評估</li>
+              <li>詞語學習與遊戲化活動</li>
+              <li>最少 25 小時體驗服務</li>
+              <li>反思與專業成長</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 服務概要 -->
+    <section id="summary" class="band-soft" aria-labelledby="summary-title">
+      <div class="container">
+        <h2 class="section-title" id="summary-title">服務概要</h2>
+        <div class="section-underline"></div>
+        <div class="summary-grid">
+          <article class="summary-card"><div class="icon">📅</div><div class="label">服務期</div><div class="value">2027 年 1 月至 2 月底</div></article>
+          <article class="summary-card"><div class="icon">📚</div><div class="label">堂數</div><div class="value">約 6–8 堂<br><span style="font-weight:600;font-size:0.88rem;color:var(--ink-soft)">課內或課後均可</span></div></article>
+          <article class="summary-card"><div class="icon">🎓</div><div class="label">服務對象</div><div class="value">S.1–S.6 非華語學生</div></article>
+          <article class="summary-card"><div class="icon">🎬</div><div class="label">教學內容</div><div class="value">看動畫・學歷史<br><span style="font-weight:600;font-size:0.88rem;color:var(--ink-soft)">學詞語、玩遊戲</span></div></article>
+          <article class="summary-card"><div class="icon">👥</div><div class="label">人手安排</div><div class="value">每堂最少 4 名準教師</div></article>
+          <article class="summary-card"><div class="icon">🎁</div><div class="label">費用</div><div class="value">全免</div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 合作學校（依信報報道） -->
+    <section id="schools" aria-labelledby="schools-title">
+      <div class="container">
+        <h2 class="section-title" id="schools-title">合作學校</h2>
+        <div class="section-underline"></div>
+        <p class="lead" style="margin-bottom:1.2rem;">
+          上年度準教師走進本地中小學前線服務；以下為曾獲報道的合作學校，新一年度歡迎更多學校加入。
+        </p>
+        <ul class="school-grid">
+          <li class="school-card">
+            <div class="emoji" aria-hidden="true">🏫</div>
+            <div>
+              <strong>中華基督教會蒙黃花沃紀念小學</strong>
+              <span>屯門｜高小非華語學生功課輔導與課堂活動</span>
+            </div>
+          </li>
+          <li class="school-card">
+            <div class="emoji" aria-hidden="true">🏫</div>
+            <div>
+              <strong>德蘭中學</strong>
+              <span>中學｜動畫輔助非華語中文學習</span>
+            </div>
+          </li>
+          <li class="school-card">
+            <div class="emoji" aria-hidden="true">🏫</div>
+            <div>
+              <strong>嶺南鍾榮光博士紀念中學</strong>
+              <span>中學｜中史主題學習與國民教育體驗</span>
+            </div>
+          </li>
+        </ul>
+        <p style="margin-top:1rem;font-size:0.85rem;color:var(--ink-soft);">每所合作學校可選出優秀非華語學生，頒發「2026 最佳非華語中文之星」獎狀。</p>
+      </div>
+    </section>
+
+    <!-- 媒體報道 -->
+    <section id="news" class="band-soft" aria-labelledby="news-title">
+      <div class="container">
+        <h2 class="section-title" id="news-title">媒體報道・去年情況</h2>
+        <div class="section-underline"></div>
+        <article class="news-card">
+          <p class="news-meta">信報教育　｜　2026 年 5 月 6 日　｜　撰文：熊威</p>
+          <h3>準教師以動畫助非華語生學中文</h3>
+          <p>
+            香港教育大學準教師修讀「非華語生學中文：以中史動畫為基礎」課程後，
+            走進中華基督教會蒙黃花沃紀念小學、德蘭中學及嶺南鍾榮光博士紀念中學等校，
+            運用動畫資源協助非華語學生跨越語言與文化障礙，結合主題教學及國民教育，展現以學生為本的教學實踐。
+          </p>
+          <p>
+            於蒙黃花沃紀念小學，準教師透過前測與一對一輔導了解學習起點，並以中秋、農曆新年、十二生肖、揮春等單元提升識字、書寫與口語表達；
+            對比前後測，學生字形筆劃見明顯進步。服務結束後，該校鄭家寶校長亦到教大分享校本中華文化教育經驗。
+          </p>
+          <a class="news-link" href="https://edu.hkej.com/php/article.detail.php?aid=64111" target="_blank" rel="noopener">閱讀信報原文 →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 課堂影片（本地嵌入） -->
+    <section id="video" aria-labelledby="video-title">
+      <div class="container">
+        <h2 class="section-title" id="video-title">
+          <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="8" width="34" height="24" rx="6" fill="#7EB8D4" stroke="#3D2F1F" stroke-width="2.5"/><polygon points="16,16 28,20 16,24" fill="#FFFDF8"/></svg>
+          課堂影片
+        </h2>
+        <div class="section-underline"></div>
+        <p class="lead" style="margin-bottom:1.2rem;">上年度服務學習課堂紀錄（影片已內嵌於本站，無需外連）。</p>
+        <div class="video-wrap">
+          <video controls preload="metadata" poster="images/video-poster.jpg" playsinline>
+            <source src="media/classroom.mp4" type="video/mp4" />
+            你的瀏覽器不支援影片播放，請更新瀏覽器後再試。
+          </video>
+          <p class="video-caption">GEM1047 課堂／服務學習活動片段（約 14 分鐘）</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 課堂活動與成果 -->
+    <section id="activities" class="band-soft" aria-labelledby="activities-title">
+      <div class="container">
+        <h2 class="section-title" id="activities-title">課堂活動與成果</h2>
+        <div class="section-underline"></div>
+        <p class="lead" style="margin-bottom:1.4rem;">以下相片來自上年度課堂與學生作品，已存放於本站，不依賴外連。</p>
+        <div class="gallery">
+          <figure class="gallery-card"><img class="gallery-img" src="images/gallery-01.jpg" alt="課堂教學現場" loading="lazy" width="800" height="600" /><figcaption><strong>課堂教學現場</strong><span>準教師小組協作授課剪影</span></figcaption></figure>
+          <figure class="gallery-card"><img class="gallery-img" src="images/gallery-02.jpg" alt="課堂互動" loading="lazy" width="800" height="600" /><figcaption><strong>課堂互動</strong><span>動畫輔助中文／中史學習</span></figcaption></figure>
+          <figure class="gallery-card"><img class="gallery-img" src="images/gallery-03.jpg" alt="小組學習" loading="lazy" width="800" height="600" /><figcaption><strong>小組學習</strong><span>非華語學生分組活動</span></figcaption></figure>
+          <figure class="gallery-card"><img class="gallery-img" src="images/gallery-04.jpg" alt="課堂實踐" loading="lazy" width="800" height="600" /><figcaption><strong>課堂實踐</strong><span>遊戲化詞語與文化活動</span></figcaption></figure>
+          <figure class="gallery-card"><img class="gallery-img" src="images/gallery-05.jpg" alt="服務團隊" loading="lazy" width="800" height="600" /><figcaption><strong>服務團隊</strong><span>教大學生課堂服務紀錄</span></figcaption></figure>
+          <figure class="gallery-card"><img class="gallery-img" src="images/gallery-06.jpg" alt="學生作品" loading="lazy" width="800" height="600" /><figcaption><strong>學生作品</strong><span>課堂產出與書寫實踐</span></figcaption></figure>
+          <figure class="gallery-card"><img class="gallery-img" src="images/gallery-07.jpg" alt="工作紙成果" loading="lazy" width="800" height="600" /><figcaption><strong>工作紙成果</strong><span>學生工作紙示例</span></figcaption></figure>
+          <figure class="gallery-card"><img class="gallery-img" src="images/gallery-08.jpg" alt="書寫練習" loading="lazy" width="800" height="600" /><figcaption><strong>書寫練習</strong><span>非華語學生書寫進步</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 去年作品 -->
+    <section id="past-works" aria-labelledby="past-works-title">
+      <div class="container">
+        <h2 class="section-title" id="past-works-title">去年學生作品與教學資源</h2>
+        <div class="section-underline"></div>
+        <p class="lead" style="margin-bottom:1.4rem;">上年度教材與作品摘要。相片與影片已內嵌本站；完整教案／PDF 備份連結如下（建議另存）。</p>
+        <div class="works-grid">
+          <article class="works-card">
+            <h3>第四組 教學資源</h3>
+            <ul>
+              <li>教學簡報（第一至第四節）</li>
+              <li>教案及教學資源</li>
+              <li>匯報簡報</li>
+            </ul>
+            <p class="works-folder"><a href="https://drive.google.com/drive/folders/1g_UMWh-qYeKxSYhhgVCTUDlepE8OyGnN" target="_blank" rel="noopener">備份資料夾 →</a></p>
+          </article>
+          <article class="works-card">
+            <h3>GEM 組別資源與學生作品</h3>
+            <ul>
+              <li>學生作品（工作紙、揮春書寫等）</li>
+              <li>教案設計與教學材料</li>
+              <li>十二生肖工作紙／字卡</li>
+            </ul>
+            <p class="works-folder"><a href="https://drive.google.com/drive/folders/1S1Nt7jtb786aA5ea_yuClp9rBdsiiriU" target="_blank" rel="noopener">備份資料夾 →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 學校回饋 -->
+    <section id="feedback" class="band-soft" aria-labelledby="feedback-title">
+      <div class="container">
+        <h2 class="section-title" id="feedback-title">學校回饋</h2>
+        <div class="section-underline"></div>
+        <div class="quotes" style="grid-template-columns: 1fr;">
+          <blockquote class="feedback">
+            <p>學生們對「糖黐豆」和「大電視」遊戲印象最深，課後仍會討論。她們對「日」字部的字掌握得比預期好。</p>
+            <footer>— 德蘭中學原校導師（課後交流）</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 反思 -->
+    <section id="reflection" aria-labelledby="reflection-title">
+      <div class="container">
+        <h2 class="section-title" id="reflection-title">教大學生反思</h2>
+        <div class="section-underline"></div>
+        <div class="quotes" style="grid-template-columns: 1fr;">
+          <blockquote class="feedback">
+            <p>教授非華語學生中文的關鍵，在於去障礙、建鷹架、連生活。中史動畫與多元教學活動的結合，能有效打破語言與文化的壁壘。在德蘭中學的六節課中，我見證了學生從對「年獸」一無所知，到能自信地說出「團圓」、「平安」等祝福語；從對漢字部件感到困惑，到能主動參與「糖黐豆」的部首組合遊戲。</p>
+            <p style="padding-top:0.35rem;">從前我對非華語教學的認知多停留於「字詞翻譯」與「逐字帶讀」；課程讓我明白，漢字對他們而言如同一幅幅圖畫，多模態輸入與文化回應教學，才能真正降低門檻、建立共融課堂。</p>
+            <footer>— <cite>李帥鋭</cite>，GEM1047　摘自個人反思報告</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. 合作邀請 -->
+    <section id="invite" aria-labelledby="invite-title">
+      <div class="container">
+        <div class="invite">
+          <h2 class="section-title" id="invite-title" style="justify-content:center;">誠邀學校合作</h2>
+          <div class="section-underline"></div>
+          <p>若貴校希望引入動畫教學支援非華語學生的中文學習，歡迎成為 GEM1047 服務學習合作夥伴。費用全免，教案可按校本調適。</p>
+          <ul class="school-needs">
+            <li>透過 Zoom 與教大學生見面，敲定課節日期及時間</li>
+            <li>開放 1 月至 2 月約 6–8 堂（課內或課後均可）</li>
+            <li>課後給予一次簡單回饋</li>
+          </ul>
+          <dl class="contact-box">
+            <dt>科目統籌</dt>
+            <dd>翟彥君</dd>
+            <dt>電郵</dt>
+            <dd><a href="mailto:ykchak@eduhk.hk">ykchak@eduhk.hk</a></dd>
+            <dt>辦公電話</dt>
+            <dd>2948 7806</dd>
+            <dt>機構</dt>
+            <dd>香港教育大學 · GEM1047《非華語生學中文》</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>
+        <strong>GEM1047《非華語生學中文：以中史動畫為基礎》</strong>
+        香港教育大學 · 通識教育課程<br />
+        © 2026–27 The Education University of Hong Kong
+      </div>
+      <div>
+        <strong>聯絡</strong>
+        翟彥君　<a href="mailto:ykchak@eduhk.hk">ykchak@eduhk.hk</a><br />
+        辦公電話：2948 7806
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" type="button" aria-label="回到頂部">↑</button>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById("navToggle");
+      var menu = document.getElementById("nav-menu");
+      if (toggle && menu) {
+        toggle.addEventListener("click", function () {
+          var open = menu.classList.toggle("open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            menu.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+      var backTop = document.getElementById("backTop");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 400) backTop.classList.add("show");
+        else backTop.classList.remove("show");
+      });
+      backTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    })();
+  </script>
+</body>
+</html>
